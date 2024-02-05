@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Your Application{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><text y='1.2em' font-size='96'>⚫️</text><text y='1.3em' x='0.2em' font-size='76' fill='#fff'>sf</text></svg>">
+    {% block stylesheets %}
+        {# Include your stylesheets here, for example: #}
+        {# <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> #}
+    {% endblock %}
+    
+    {% block javascripts %}
+        {# Include your JavaScript files here, for example: #}
+        {# <script src="{{ asset('js/main.js') }}"></script> #}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# config/routes.yaml
+
+pagina_principal:
+    path: /
+    controller: App\Controller\ProductController::paginaPrincipal
+    
+detalle_producto:
+    path: /producto/{id}
+    controller: App\Controller\ProductoController::detalleProducto
+    requirements:
+        id: '\d+'
+
+carrito_compras:
+    path: /carrito
+    controller: App\Controller\ProductoController::carritoCompras
