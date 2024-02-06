@@ -9,13 +9,18 @@ controllers:
 pagina_principal:
     path: /
     controller: App\Controller\ProductController::paginaPrincipal
+
+agregar_al_carrito:
+    path: '/agregar/{id}'
+    controller: 'App\Controller\ProductController::agregarAlCarrito'
+    methods: ['GET']  
     
 detalle_producto:
     path: /producto/{id}
-    controller: App\Controller\ProductoController::detalleProducto
+    controller: App\Controller\ProductController::detalleProducto
     requirements:
         id: '\d+'
 
 carrito_compras:
     path: /carrito
-    controller: App\Controller\ProductoController::carritoCompras
+    controller: App\Controller\ProductController::carritoCompras

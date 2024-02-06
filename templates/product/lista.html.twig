@@ -1,16 +1,15 @@
 {# templates/product/lista.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}List of Products{% endblock %}
+{% block title %}Lista de Productos{% endblock %}
 
 {% block body %}
-    <h1>List of Products</h1>
+    <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
             <li>
-                <strong>{{ producto.nombre }}</strong><br>
-                <span>Precio: ${{ producto.precio }}</span><br>
-                <span>{{ producto.descripcion }}</span>
+                {{ producto.nombre }} - ${{ producto.precio }} - ${{ producto.descripcion }}
+                <a href="{{ path('agregar_al_carrito', { 'id': producto.id }) }}">Agregar al Carrito</a>
             </li>
         {% endfor %}
     </ul>
